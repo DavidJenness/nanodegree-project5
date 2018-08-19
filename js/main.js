@@ -86,6 +86,10 @@ initMap = () => {
     id: 'mapbox.streets'
   }).addTo(newMap);
 
+  // var myKey = 'https://api.tiles.mapbox.com/v4/mapbox.streets.html?access_token=' + MapAPIkey;
+  // event.waitUntil(
+  //   caches.open('my-site-cache-v1').then(cache => cache.addAll([myKey])));
+
   updateRestaurants();
 }
 /* window.initMap = () => {
