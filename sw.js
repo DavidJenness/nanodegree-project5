@@ -48,7 +48,9 @@ var CACHE_NAME = 'my-site-cache-v1';
     '/js/dbhelper.js',
     '/js/main.js',
     '/js/restaurant_info.js',
-    '/sw.js']))
+    '/sw.js',
+    'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js ',
+    '/']))
   );
 });
 
@@ -57,6 +59,7 @@ var CACHE_NAME = 'my-site-cache-v1';
 
     var cacheWhitelist = ['my-site-cache-v1'];
     console.log('Performed Activate, Dave!');
+    self.skipWaiting();
     event.waitUntil(
       caches.keys().then(function(cacheNames) {
         return Promise.all(
@@ -73,19 +76,32 @@ var CACHE_NAME = 'my-site-cache-v1';
 
 
 
+  // self.addEventListener('fetch', function(event) {
+  //   console.log('Performed Fetch, Dave!' + event.request.url);
+  //   event.respondWith(
+  //     caches.match(event.request)
+  //       .then(function(response) {
+  //         // Cache hit - return response
+  //         if (response) {
+  //           console.log('Fetch Success, Dave! '  + event.request.url);
+  //           return response;
+  //         }
+  //         console.log('Fetch Failure, Dave! ' + event.request.url);
+  //         return fetch(event.request);
+  //       }
+  //     )
+  //   );
+  // });
+
   self.addEventListener('fetch', function(event) {
-    console.log('Performed Fetch, Dave!' + event.request.url);
     event.respondWith(
-      caches.match(event.request)
-        .then(function(response) {
-          // Cache hit - return response
-          if (response) {
-            console.log('Fetch Success, Dave! '  + event.request.url);
+      caches.open(CACHE_NAME).then(function(cache) {
+        return cache.match(event.request).then(function (response) {
+          return response || fetch(event.request).then(function(response) {
+            cache.put(event.request, response.clone());
             return response;
-          }
-          console.log('Fetch Failure, Dave! ' + event.request.url);
-          return fetch(event.request);
-        }
-      )
+          });
+        });
+      })
     );
   });
