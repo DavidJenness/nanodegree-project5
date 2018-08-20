@@ -20,13 +20,10 @@ In a terminal, check the version of Python you have: `python -V`. If you have Py
 3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
 4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
 
-## Leaflet.js and Mapbox:
+## MapBox Notes
+In order for this project to work correctly, you will need to add a file to the /js directory called "apikey.js"
 
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information. 
+The contents will need to be as follows (where YOUR_MAPAPI_KEY is replaced with your ApApi Key that is provided by them):
 
-### Note about ES6
-
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
-
-
+var MapAPIkey = 'YOUR_MAPAPI_KEY'
 
