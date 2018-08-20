@@ -11,7 +11,6 @@ var CACHE_NAME = 'my-site-cache-v1';
     '/js/main.js',
     '/js/restaurant_info.js',
     '/sw.js',
-    'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js ',
     '/']))
   );
 });
