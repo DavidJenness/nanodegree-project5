@@ -1,6 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
+
+
+
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
@@ -273,3 +276,39 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
+
+/* RESPONSIVE DESIGN SECTION */
+
+/* Smallest Form Factor (Phone) */
+@media all and (max-width: 559px) {
+
+  /* ====================== Map ====================== */
+#map {
+  height: 400px;
+  width: 100%;
+  background-color: #ccc;
+}
+}
+
+/* Tablet Portrait */
+@media (min-width: 600px) {
+
+}
+
+/* Tablet LandScape */
+@media (min-width: 900px) {
+
+}
+
+/* Regular Desktop */
+@media (min-width: 1200px) {
+
+}
+
+/* Huge Desktop */
+@media (min-width: 1200px) {
+
+}
+
+/* ----------------End Responsive Design Section -------------- */

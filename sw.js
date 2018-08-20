@@ -1,7 +1,7 @@
 var CACHE_NAME = 'my-site-cache-v1';
 
  self.addEventListener('install', function(event) {
-  console.log('Performed Install, Dave!');
+  console.log('Performed Install');
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(['/index.html',
     '/css/styles.css',
@@ -19,7 +19,7 @@ var CACHE_NAME = 'my-site-cache-v1';
   self.addEventListener('activate', function(event) {
 
     var cacheWhitelist = [CACHE_NAME];
-    console.log('Performed Activate, Dave!');
+    console.log('Performed Activate');
     self.skipWaiting();
     event.waitUntil(
       caches.keys().then(function(cacheNames) {
