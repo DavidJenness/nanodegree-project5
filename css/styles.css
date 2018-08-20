@@ -204,6 +204,7 @@ nav h1 a {
   padding-left: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
+  font-size: 1.5em;
 }
 
 .reviewDate {
@@ -221,6 +222,7 @@ nav h1 a {
   padding-right: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
+  font-size: 1.5em;
 }
 .inside {
   width:100%;
@@ -256,7 +258,7 @@ nav h1 a {
 #restaurant-name {
   color: #f18200;
   font-family: Arial,sans-serif;
-  font-size: 20pt;
+  font-size: 2em;
   font-weight: 200;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -279,7 +281,7 @@ nav h1 a {
 #restaurant-cuisine {
   background-color: #333;
   color: #ddd;
-  font-size: 12pt;
+  font-size: 2em;
   font-weight: 300;
   letter-spacing: 10px;
   margin: 0 0 20px;
@@ -301,7 +303,7 @@ nav h1 a {
 }
 #reviews-container h2 {
   color: #f58500;
-  font-size: 24pt;
+  font-size: 1.5em;
   font-weight: 300;
   letter-spacing: -1px;
 }
@@ -324,9 +326,11 @@ nav h1 a {
   border-width: 1px;
   border-color: #444;
 
+
 }
 #reviews-list li p {
   margin: 0 0 10px;
+  font-size: 1.5em;
 }
 #restaurant-hours td {
   color: #666;
@@ -343,7 +347,9 @@ nav h1 a {
 
 /* Tablet Portrait */
 @media (min-width: 600px) {
-
+  #restaurant-address {
+    font-size: 2em;
+  }
 }
 
 /* Tablet LandScape */
