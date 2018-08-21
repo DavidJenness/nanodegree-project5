@@ -156,6 +156,8 @@ createReviewHTML = (review) => {
   const name = document.createElement('p');
   name.innerHTML = review.name + ' on ' + review.date;
   name.className ='reviewName';
+  name.tabIndex = '0';
+  name.setAttribute("aria-label","Name and Date of Review");
   li.appendChild(name);
 
   // const date = document.createElement('p');
@@ -166,10 +168,14 @@ createReviewHTML = (review) => {
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
   rating.className ='reviewRating';
+  rating.tabIndex ='0';
+  rating.setAttribute("aria-label","Rating");
   li.appendChild(rating);
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
+  comments.tabIndex = '0';
+  comments.setAttribute("aria-label","Review Comments");
   li.appendChild(comments);
 
   return li;
