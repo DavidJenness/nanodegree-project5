@@ -1,29 +1,42 @@
 # Mobile Web Specialist Certification Course
+# David Jenness
 ---
-#### _Three Stage Course Material Project - Restaurant Reviews_
+#### Restaurant Reviews
 
-## Project Overview: Stage 1
+## Project Overview
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+This project shows a map with nearby restaurants. The user can choose to filter
+results based on the neighborhood or type of cuisine. Once they see a restaurant they are interested in, they can "View Details". On the Details Screen, the user will see a map of the location, a photo, Address, Hours of operation, as well as reviews.  
 
-### Specification
+### Features
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
+This app was designed with the following ideals:
 
-### What do I do from here?
+* Mobile First - The App was designed to look great on everything from the smallest
+                 iPhone to the largest Web Monitor. Responsive Design is awesome!
+* Offline First - This App uses Service workers that will cache all of the items
+                  that pass through the web site. On subsequent attempts to access the page, the service worker will attempt to load from cache first
+* Accessibility - Special care was made to ensure that accessibility
+                  recommendations were followed. This includes such things as ARIA labels and roles
+* Focus - Tab indexes were used to help improve navigation especially on the                  reviews page to ease navigation concerns in regard to accessibility.
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
 
-In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
+### How do I install this project
 
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
+1. Download the code from [Project 5](https://github.com/DavidJenness/nanodegree-project5) 
 
-## MapBox Notes
-In order for this project to work correctly, you will need to add a file to the /js directory called "apikey.js"
+2. In order for this project to work correctly, you will need to add a file to the /js directory called "apikey.js"
 
-The contents will need to be as follows (where YOUR_MAPAPI_KEY is replaced with your ApApi Key that is provided by them):
+3. The contents will need to be as follows (where YOUR_MAPAPI_KEY is replaced with your ApApi Key that is provided by them):
 
-var MapAPIkey = 'YOUR_MAPAPI_KEY'
+    `var MapAPIkey = 'YOUR_MAPAPI_KEY'`
 
+4. Open a terminal window to your project's location
+
+5. Use Python to server as a web server. In my case, the command was 
+    "python -m http.server 8000"  but this may vary for you.
+
+6. With your server running, visit the site:
+    [http://localhost:8000](http://localhost:8000)
+
+ 7. Now you should be able to run the code.
