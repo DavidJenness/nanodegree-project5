@@ -201,7 +201,8 @@ nav h1 a {
   padding-left: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 .reviewDate {
@@ -213,13 +214,15 @@ nav h1 a {
 .reviewRating {
   display: inline;
   color: white;
+  text-transform: uppercase;
+  font-weight: bold;
   background-color: orange;
   border-radius: 25px;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 .inside {
   width:100%;
@@ -253,13 +256,19 @@ nav h1 a {
   font-size: 1.5em;
 }
 #restaurant-name {
-  color: #f18200;
+  color: darkblue;
   font-family: Arial,sans-serif;
-  font-size: 2em;
-  font-weight: 200;
+  background-color: white;
+  font-size: 2.5em;
+  font-weight: bold;
   letter-spacing: 0;
   text-transform: uppercase;
   line-height: 1.1;
+  border-style: solid;
+  border-radius: 25px;
+  border-color: gray;
+  padding: 5px;
+  padding-left: 10px;
 }
 #restaurant-img {
   width: 80%;
