@@ -369,21 +369,20 @@ nav h1 a {
     flex-wrap: wrap;
   }
 
+  #restaurants-list .restaurant-img {
+  min-height: 100px;
+  }
+
 }
 
-/* Tablet LandScape */
-@media (min-width: 900px) {
-
-}
-
-/* Regular Desktop */
+/* Desktop */
 @media (min-width: 1200px) {
-
+  body {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
 }
 
-/* Huge Desktop */
-@media (min-width: 1200px) {
-
-}
 
 /* ----------------End Responsive Design Section -------------- */
