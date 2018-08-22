@@ -211,7 +211,7 @@ nav h1 a {
   border-radius: 25px;
 }
 
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #f18200;
   font-family: Arial, sans-serif;
   font-size: 14pt;
@@ -251,8 +251,8 @@ nav h1 a {
   top: 0;
 }
 
-.inside h1 {
-  font-size: 30px;
+.inside h2 {
+  font-size: 2em;
 }
 
 .inside #map-container {
